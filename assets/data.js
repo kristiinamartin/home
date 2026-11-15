@@ -321,23 +321,6 @@ window.ROLES = [
   },
 
   {
-    id: "pioneers",
-    short: "Pioneers",
-    kind: "venture",
-    org: "Climate-KIC, Pioneers into Practice",
-    title: "Pioneer",
-    location: "Portugal",
-    periods: [["2018-06", "2018-11"]],
-    themes: ["innovation", "textiles", "circular"],
-    summary: "Professional mobility programme for environmental experts, with systems thinking and systems innovation courses, a team assignment and a placement at an international organisation.",
-    bullets: [
-      "Created a white paper on textile circularity in Estonia, focused on innovative technologies for sorting post-consumer textile waste to increase recycling.",
-      "Spent six weeks at the startup Sensefinity, ideating new business models for textile supply chains using its sensors."
-    ],
-    projects: []
-  },
-
-  {
     id: "textileinventory",
     short: "Textileinventory",
     kind: "venture",
@@ -374,21 +357,6 @@ window.ROLES = [
       "2013 to 2015: managed an online system for the natural gas distribution network.",
       "Analysed gas consumption data to improve efficiency and planning, and acted as the interface between engineering, data management and regulatory requirements."
     ],
-    projects: []
-  },
-
-  {
-    id: "skeleton",
-    short: "Skeleton",
-    kind: "industry",
-    org: "Skeleton Technologies",
-    title: "Sales Engineer",
-    location: "Tallinn, Estonia",
-    periods: [["2015-11", "2016-05"]],
-    themes: [],
-    summary:
-      "Technical sales at a European manufacturer of ultracapacitors, selling ultracapacitor-based engine start modules.",
-    bullets: [],
     projects: []
   }
 ];
@@ -497,33 +465,6 @@ window.PUBLICATION_GROUPS = [
       }
     ]
   }
-];
-
-/* ---------- Skills, geographies, clients ---------- */
-
-window.SKILLS = [
-  { area: "Circular economy", items: ["Circular design and business models", "Textile value chains and waste", "Supply chains", "Industrial symbiosis", "Critical raw materials circularity", "Waste policy", "Digital product passports"] },
-  { area: "Climate and GHG", items: ["GHG accounting and inventories (GHG Protocol, IPCC 2006, GPC, UNFCCC)", "Emission factors and uncertainty quantification", "MRV systems, including industrial process emissions", "NDC roadmaps", "Climate finance", "CBAM", "LCA comparisons"] },
-  { area: "Policy and regulation", items: ["EU policy analysis (CEAP, WFD, CSRD, CSDDD, EU Taxonomy, CBAM)", "Policy gap analysis", "Policy briefs", "Strategy development"] },
-  { area: "Project and programme management", items: ["End-to-end project management", "Proposals and acquisition", "Horizon Europe project management", "Managing hired experts and subcontractors", "Stakeholder and client management", "Quality assurance of deliverables"] },
-  { area: "Innovation", items: ["Evaluating innovation and business potential of funding applications", "Startup advice and mentoring"] },
-  { area: "Energy systems and modelling", items: ["Balmorel and LEAP", "Techno-economic analysis", "Energy market analysis", "Power and thermal engineering"] },
-  { area: "Stakeholder work", items: ["Interviews and consultations", "Advisory boards", "Workshops and trainings", "Policy dialogues", "Site visits", "Conference organisation"] },
-  { area: "Tools", items: ["Excel: bespoke calculation tools and models", "AI tools such as ChatGPT: use-case design and training"] }
-];
-
-window.GEOGRAPHIES = [
-  { region: "Europe", places: ["EU", "Germany", "Estonia", "Nordic-Baltic", "Portugal"] },
-  { region: "MENA", places: ["Jordan"] },
-  { region: "Africa", places: ["Uganda", "Nigeria", "Tanzania"] },
-  { region: "Asia", places: ["Vietnam", "Malaysia (Sarawak)", "Tajikistan", "Uzbekistan", "Mongolia", "China", "Japan", "India"] },
-  { region: "Islands", places: ["Mauritius", "Seychelles", "British Virgin Islands"] }
-];
-
-window.CLIENTS = [
-  "European Commission (Horizon Europe, SWITCH-Asia)", "GIZ", "Umweltbundesamt (UBA)", "BMWK", "BMUV",
-  "Asian Development Bank", "IFC", "Nordic Council of Ministers", "Global Center on Adaptation", "PwC",
-  "Estonian Ministry of Environment", "Arion Bank", "Elron", "Tallinn Airport", "Jordan Strategy Forum", "Climate-KIC"
 ];
 
 /* ---------- Education ---------- */

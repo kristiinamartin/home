@@ -59,88 +59,6 @@
     });
   }
 
-  // ---------- career ribbon ----------
-
-  var START_YEAR = 2013;
-  function monthIndex(ym, endInclusive) {
-    var d;
-    if (!ym) { var n = new Date(); d = (n.getFullYear() - START_YEAR) * 12 + n.getMonth(); }
-    else { var p = ym.split("-"); d = (parseInt(p[0], 10) - START_YEAR) * 12 + (parseInt(p[1], 10) - 1); }
-    return endInclusive ? d + 1 : d;
-  }
-
-  var ribbonBars = [];
-
-  function renderRibbon() {
-    var host = $("ribbon");
-    var endYear = new Date().getFullYear() + 1;
-    var total = (endYear - START_YEAR) * 12;
-
-    var items = [];
-    ROLES.forEach(function (r) {
-      r.periods.forEach(function (p) {
-        items.push({ role: r, s: monthIndex(p[0], false), e: monthIndex(p[1], true), period: p });
-      });
-    });
-    items.sort(function (a, b) { return a.s - b.s; });
-
-    var laneEnds = [];
-    items.forEach(function (it) {
-      var lane = 0;
-      while (laneEnds[lane] !== undefined && laneEnds[lane] > it.s - 0.5) lane++;
-      laneEnds[lane] = it.e;
-      it.lane = lane;
-    });
-
-    var laneH = 2.1; // rem
-    var lanes = el("div", { class: "ribbon-lanes", style: "height:" + (laneEnds.length * laneH + 0.25) + "rem" });
-
-    var grid = el("div", { class: "ribbon-grid" });
-    for (var y = START_YEAR; y <= endYear; y++) {
-      var tick = el("div", { class: "ribbon-tick", style: "left:" + (((y - START_YEAR) * 12) / total) * 100 + "%" });
-      if ((y - START_YEAR) % 2 === 0 && y < endYear) tick.appendChild(el("span", { text: String(y) }));
-      grid.appendChild(tick);
-    }
-    lanes.appendChild(grid);
-
-    items.forEach(function (it) {
-      var role = it.role;
-      var bar = el("button", {
-        type: "button",
-        class: "ribbon-bar",
-        "data-kind": role.kind,
-        "data-role": role.id,
-        "aria-label": role.title + ", " + role.org + ", " + range(it.period),
-        style:
-          "left:" + (it.s / total) * 100 + "%;width:" + ((it.e - it.s) / total) * 100 + "%;top:" + (it.lane * laneH + 0.1) + "rem",
-        text: role.short || role.org
-      });
-      var caption = role.title + ", " + role.org + " (" + range(it.period) + ")";
-      function show() { $("ribbon-caption").textContent = caption; bar.classList.add("is-active"); }
-      function hide() { $("ribbon-caption").textContent = "Select a bar to jump to that role."; bar.classList.remove("is-active"); }
-      bar.setAttribute("data-label", role.short || role.org);
-      bar.addEventListener("mouseenter", show);
-      bar.addEventListener("focus", show);
-      bar.addEventListener("mouseleave", hide);
-      bar.addEventListener("blur", hide);
-      bar.addEventListener("click", function () { jumpToRole(role.id); });
-      ribbonBars.push(bar);
-      lanes.appendChild(bar);
-    });
-
-    host.appendChild(lanes);
-    fitLabels();
-    window.addEventListener("resize", fitLabels);
-  }
-
-  // Bars too narrow for their label stay empty; the caption and aria-label still name them.
-  function fitLabels() {
-    ribbonBars.forEach(function (b) {
-      b.textContent = b.getAttribute("data-label");
-      if (b.scrollWidth > b.clientWidth + 1) b.textContent = "";
-    });
-  }
-
   // ---------- roles ----------
 
   var roleNodes = {}; // id -> {node, projects:[{node, themes}]}
@@ -196,17 +114,6 @@
     });
   }
 
-  function jumpToRole(id) {
-    setFilter(null);
-    var r = roleNodes[id];
-    if (!r) return;
-    r.node.open = true;
-    r.node.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
-    r.node.classList.add("is-flash");
-    setTimeout(function () { r.node.classList.remove("is-flash"); }, 1400);
-    if (history.replaceState) history.replaceState(null, "", "#role-" + id);
-  }
-
   // ---------- filters ----------
 
   var activeTheme = null;
@@ -248,13 +155,6 @@
       if (themeId && visible) r.node.open = true;
     });
 
-    ribbonBars.forEach(function (b) {
-      var role = roleNodes[b.getAttribute("data-role")].role;
-      var dim = themeId && role.themes.indexOf(themeId) === -1 &&
-        !roleNodes[role.id].projects.some(function (p) { return p.themes.indexOf(themeId) !== -1; });
-      b.classList.toggle("is-dim", !!dim);
-    });
-
     $("filter-note").textContent = themeId
       ? "Showing " + shown + " of " + ROLES.length + " roles for “" + themeLabel(themeId) + "”, with the most relevant projects."
       : "";
@@ -293,24 +193,7 @@
       count + " reports, policy briefs and studies, co-authored unless stated. Items marked forthcoming are not yet published.";
   }
 
-  // ---------- skills, reach, education, contact ----------
-
-  function renderSkills() {
-    var grid = $("skills-grid");
-    window.SKILLS.forEach(function (s) {
-      var ul = el("ul", {});
-      s.items.forEach(function (i) { ul.appendChild(el("li", { text: i })); });
-      grid.appendChild(el("div", { class: "skill" }, el("h3", { text: s.area }), ul));
-    });
-
-    var geo = $("geo");
-    window.GEOGRAPHIES.forEach(function (g) {
-      geo.appendChild(el("div", {}, el("dt", { text: g.region }), el("dd", { text: g.places.join(", ") })));
-    });
-
-    var clients = $("clients");
-    window.CLIENTS.forEach(function (c) { clients.appendChild(el("li", { text: c })); });
-  }
+  // ---------- education, contact ----------
 
   function renderEducation() {
     var edu = $("edu");
@@ -360,11 +243,9 @@
   // ---------- init ----------
 
   renderProfile();
-  renderRibbon();
   renderChips();
   renderRoles();
   renderPublications();
-  renderSkills();
   renderEducation();
   renderContact();
   initScrollSpy();
