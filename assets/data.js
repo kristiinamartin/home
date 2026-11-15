@@ -40,7 +40,8 @@ window.PROFILE = {
 window.ROLES = [
   {
     id: "eitrm",
-    short: "EIT RawMaterials",
+    row: "EIT RawMaterials",
+    bar: "Project Officer",
     kind: "current",
     org: "EIT RawMaterials",
     title: "Project Officer, Innovation Team",
@@ -90,7 +91,8 @@ window.ROLES = [
 
   {
     id: "adelphi-mgr",
-    short: "adelphi, Manager",
+    row: "adelphi",
+    bar: "Manager",
     kind: "consulting",
     org: "adelphi",
     title: "Manager, Climate Policy",
@@ -151,7 +153,8 @@ window.ROLES = [
 
   {
     id: "adelphi-cons",
-    short: "adelphi, Consultant",
+    row: "adelphi",
+    bar: "Consultant",
     kind: "consulting",
     org: "adelphi",
     title: "Consultant, Green and Circular Economy",
@@ -236,7 +239,8 @@ window.ROLES = [
 
   {
     id: "freelance",
-    short: "Freelance",
+    row: "Freelance",
+    bar: "Consultant",
     kind: "consulting",
     org: "Freelance sustainability consultant",
     title: "Self-employed",
@@ -253,7 +257,8 @@ window.ROLES = [
 
   {
     id: "sei",
-    short: "SEI Tallinn",
+    row: "SEI Tallinn",
+    bar: "Circular economy expert",
     kind: "research",
     org: "Stockholm Environment Institute (SEI), Tallinn Centre",
     title: "Environmental Management, Circular Economy Expert",
@@ -322,7 +327,8 @@ window.ROLES = [
 
   {
     id: "textileinventory",
-    short: "Textileinventory",
+    row: "Textileinventory",
+    bar: "Founder",
     kind: "venture",
     org: "Textileinventory",
     title: "Founder and General Manager",
@@ -343,7 +349,8 @@ window.ROLES = [
 
   {
     id: "gaasivorgud",
-    short: "Gaasivõrgud",
+    row: "Gaasivõrgud",
+    bar: "Data specialist",
     kind: "industry",
     org: "AS Gaasivõrgud",
     title: "Data Acquisition Specialist",

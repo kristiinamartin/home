@@ -59,6 +59,100 @@
     });
   }
 
+
+  // ---------- career timeline ----------
+
+  var START_YEAR = 2013;
+  var DEFAULT_CAPTION = "Select a role to jump to its details.";
+  var timelineBars = [];
+
+  function monthIndex(ym, endInclusive) {
+    var d;
+    if (!ym) { var n = new Date(); d = (n.getFullYear() - START_YEAR) * 12 + n.getMonth(); }
+    else { var p = ym.split("-"); d = (parseInt(p[0], 10) - START_YEAR) * 12 + (parseInt(p[1], 10) - 1); }
+    return endInclusive ? d + 1 : d;
+  }
+
+  function renderTimeline() {
+    var host = $("tl");
+    var endYear = new Date().getFullYear() + 1;
+    var years = endYear - START_YEAR;
+    var total = years * 12;
+    host.style.setProperty("--years", years);
+
+    // axis
+    var axis = el("div", { class: "tl-row tl-axis", "aria-hidden": "true" }, el("div", { class: "tl-label" }));
+    var ticks = el("div", { class: "tl-track tl-ticks" });
+    for (var y = START_YEAR; y < endYear; y++) {
+      ticks.appendChild(el("span", { class: (y - START_YEAR) % 4 ? "tl-minor" : "", text: String(y) }));
+    }
+    axis.appendChild(ticks);
+    host.appendChild(axis);
+
+    // one row per employer, newest first
+    var rows = {}, order = [];
+    ROLES.forEach(function (r) {
+      if (!rows[r.row]) { rows[r.row] = { label: r.row, roles: [], latest: 0 }; order.push(r.row); }
+      rows[r.row].roles.push(r);
+      r.periods.forEach(function (p) { rows[r.row].latest = Math.max(rows[r.row].latest, monthIndex(p[0], false)); });
+    });
+    order.sort(function (a, b) { return rows[b].latest - rows[a].latest; });
+
+    order.forEach(function (key) {
+      var row = rows[key];
+      var track = el("div", { class: "tl-track" });
+      row.roles.forEach(function (role) {
+        role.periods.forEach(function (p) {
+          var s = monthIndex(p[0], false), e = monthIndex(p[1], true);
+          var bar = el("button", {
+            type: "button",
+            class: "tl-bar",
+            "data-kind": role.kind,
+            "data-role": role.id,
+            "data-label": role.bar,
+            "aria-label": role.title + ", " + role.org + ", " + range(p) + ". Jump to details.",
+            style: "left:" + (s / total) * 100 + "%;width:" + ((e - s) / total) * 100 + "%",
+            text: role.bar
+          });
+          var caption = role.title + " at " + role.row + ", " + range(p) + ". Select to see the details.";
+          function show() { $("timeline-caption").textContent = caption; }
+          function hide() { $("timeline-caption").textContent = DEFAULT_CAPTION; }
+          bar.addEventListener("mouseenter", show);
+          bar.addEventListener("focus", show);
+          bar.addEventListener("mouseleave", hide);
+          bar.addEventListener("blur", hide);
+          bar.addEventListener("click", function () { jumpToRole(role.id); });
+          timelineBars.push(bar);
+          track.appendChild(bar);
+        });
+      });
+      host.appendChild(el("div", { class: "tl-row" }, el("div", { class: "tl-label", text: row.label }), track));
+    });
+
+    fitLabels();
+    window.addEventListener("resize", fitLabels);
+  }
+
+  // A bar too narrow for its label stays empty; its row, tooltip and caption still name it.
+  function fitLabels() {
+    timelineBars.forEach(function (b) {
+      b.textContent = b.getAttribute("data-label");
+      if (b.scrollWidth > b.clientWidth + 1) b.textContent = "";
+    });
+  }
+
+  function jumpToRole(id) {
+    setFilter(null);
+    var r = roleNodes[id];
+    if (!r) return;
+    r.node.open = true;
+    var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    r.node.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "start" });
+    r.node.classList.add("is-flash");
+    setTimeout(function () { r.node.classList.remove("is-flash"); }, 1600);
+    if (history.replaceState) history.replaceState(null, "", "#role-" + id);
+  }
+
   // ---------- roles ----------
 
   var roleNodes = {}; // id -> {node, projects:[{node, themes}]}
@@ -108,6 +202,7 @@
         body.appendChild(list);
       }
 
+      body.appendChild(el("p", { class: "role-back" }, el("a", { href: "#timeline", text: "Back to timeline" })));
       var node = el("details", { class: "role", id: "role-" + role.id, open: idx === 0 }, summary, body);
       roleNodes[role.id] = { node: node, role: role, projects: projNodes };
       host.appendChild(node);
@@ -153,6 +248,13 @@
         p.node.hidden = !showProject;
       });
       if (themeId && visible) r.node.open = true;
+    });
+
+    timelineBars.forEach(function (b) {
+      var role = roleNodes[b.getAttribute("data-role")].role;
+      var match = !themeId || role.themes.indexOf(themeId) !== -1 ||
+        roleNodes[role.id].projects.some(function (p) { return p.themes.indexOf(themeId) !== -1; });
+      b.classList.toggle("is-dim", !match);
     });
 
     $("filter-note").textContent = themeId
@@ -245,6 +347,7 @@
   renderProfile();
   renderChips();
   renderRoles();
+  renderTimeline();
   renderPublications();
   renderEducation();
   renderContact();
