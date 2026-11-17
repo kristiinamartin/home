@@ -1,0 +1,19 @@
+# ABOUT ME and site-wide text.
+# "email" stays empty until you want a public address shown (phone and home address are never shown).
+
+name: Kristiina Martin
+authorName: Martin, K.
+headline: Circular economy, critical raw materials and climate policy
+intro: I work on circular economy and climate policy, with about nine years of experience in EU project management, greenhouse gas accounting and stakeholder work across Europe, Asia, Africa and the MENA region. Today I evaluate innovation projects for EIT RawMaterials, manage two Horizon Europe projects and lead industry working groups on metals. Before that I advised governments, development banks and companies on climate policy, supply chains and textile circularity.
+location: Berlin, Germany
+facts:
+  - label: Current role
+    value: Project Officer, Innovation Team, EIT RawMaterials
+  - label: Experience and base
+    value: About 9 years. Based in Berlin, originally from Estonia.
+  - label: Languages
+    value: Estonian, Russian (native); English (full professional); German (professional working); Swedish (elementary)
+links:
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/kristiinamartin
+email: ''

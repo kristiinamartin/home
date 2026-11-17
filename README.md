@@ -1,23 +1,52 @@
 # Kristiina Martin, personal homepage
 
-A career portfolio: experience with expandable projects, a filterable view by theme, a career timeline, publications, skills and education.
+Five pages: About, Experience, Publications, Education, Contact. The text lives in small data files; a template turns them into pages whenever something is saved on `main`.
 
-## Edit the content
+## Where to edit what
 
-All text lives in `assets/data.js`. Change it there and the page updates; no other file needs touching.
+| To change | Edit this file (in `src/_data/`) |
+|---|---|
+| Intro, headline, facts, LinkedIn link, public email | `site.yml` |
+| A role (and the career timeline) | `roles.yml` |
+| A project (shown under its role on Experience) | `projects.yml` |
+| A publication | `publications.yml` |
+| Degrees and certificates | `education.yml` |
+| Topic filters on the Experience page | `themes.yml` |
+| Menu names and order | `nav.yml` |
 
-- New role or project: copy an existing entry in `ROLES` and edit it.
-- New publication: add an item to `PUBLICATION_GROUPS`. Add `link: "https://..."` to show a link, or `draft: true` to hide it for now.
-- Contact: add `email` in `PROFILE` to show a public address. Phone and home address are deliberately not on the site.
+Each file starts with comments that explain its fields.
 
-## Preview locally
+## Edit in the browser (no tools needed)
 
-Open `index.html` in a browser. There is no build step.
+1. Open the file on github.com, click the pencil icon, and edit.
+2. Click **Commit changes**. The site rebuilds and is live in about a minute.
 
-## Publish with GitHub Pages
+Copy an existing block when adding something, then change the text. Rules that avoid mistakes:
 
-Repository Settings, Pages, then Deploy from a branch, branch `main`, folder `/ (root)`.
+- Keep the indentation (two spaces per level) and the dashes at the start of list items.
+- Put any text that contains a colon in double quotes, for example `title: "Policy brief: Marine litter"`.
+- Dates are `"YYYY-MM"`. A current role has a start and no end.
+- Never type your phone number or home address into these files. The repository is public.
+
+If the site does not update, open the **Actions** tab and look for a red cross; the message names the file and line with the problem.
+
+## Publish with GitHub Pages (one-time)
+
+Repository **Settings, Pages, Source: GitHub Actions**. After that, every change on `main` is published by `.github/workflows/deploy.yml`.
+
+## Preview on your computer
+
+```
+npm install
+npm start
+```
+
+Then open the address it prints. Changes appear as you save.
+
+## Adding a page later
+
+Copy `src/contact.njk` to a new name, change its front matter (`title`, `description`), write the content, and add the page to `src/_data/nav.yml`.
 
 ## Print or save as PDF
 
-Print the page from the browser. The print layout expands everything and hides the navigation.
+Print any page from the browser. The print layout opens every role and hides the menu.

@@ -1,0 +1,17 @@
+# TOPICS for the filter chips on the Experience page.
+# "id" is used in roles.yml and projects.yml; "label" is what visitors see.
+
+- id: circular
+  label: Circular economy
+- id: crm
+  label: Critical raw materials
+- id: ghg
+  label: GHG accounting & MRV
+- id: policy
+  label: Climate & EU policy
+- id: finance
+  label: Climate & green finance
+- id: textiles
+  label: Textiles
+- id: innovation
+  label: Innovation & startups

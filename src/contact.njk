@@ -1,0 +1,16 @@
+---
+layout: base.njk
+title: Contact
+description: How to get in touch with Kristiina Martin.
+---
+<h1 class="page-title">Contact</h1>
+<p class="section-lede">The easiest way to reach me is on LinkedIn. I am based in {{ site.location }}.</p>
+
+<ul class="contact-list">
+  {%- for l in site.links %}
+  <li><a class="contact-link" href="{{ l.url }}" rel="noopener">{{ l.label }}</a></li>
+  {%- endfor %}
+  {%- if site.email %}
+  <li><a class="contact-link" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+  {%- endif %}
+</ul>

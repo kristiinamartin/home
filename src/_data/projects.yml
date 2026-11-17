@@ -1,0 +1,218 @@
+# PROJECTS: one entry per project. Each project belongs to a role through "role",
+# which must match an "id" in roles.yml. Projects appear under their role on the
+# Experience page.
+#
+# To add a project, copy a block and edit it.
+#   id        short unique name, no spaces (used in links)
+#   role      id of the role it belongs to
+#   themes    topics for the filter chips (ids are in themes.yml)
+#   points    optional bullet list shown under the text
+# Put any text containing a colon inside double quotes.
+
+- id: innovation-call-evaluations
+  role: eitrm
+  title: Innovation call evaluations
+  client: EIT RawMaterials innovation calls, funding up to €2.5M per project
+  themes:
+    - innovation
+    - crm
+    - circular
+  text: Applicants are consortia of startups, SMEs, large industry and research organisations, and each must represent the knowledge triangle of higher education, research and industry. I score the innovativeness and business potential of each application. My score is combined with the business development team's score, who examine the business case and financial mechanisms, and with the consensus score of external evaluators. Management and the access to finance team review the top-ranked projects and decide who is funded. In return EIT RawMaterials receives revenue sharing or an equity stake. Critical raw materials innovation and circular economy projects are routed to me.
+- id: risers
+  role: eitrm
+  title: RISERS
+  client: Horizon Europe, regulatory and standards barriers to industrial symbiosis
+  themes:
+    - circular
+    - policy
+  text: EIT RawMaterials is a contributing partner to several work streams, with a budget of around €200,000. I took part in a webinar and the technical committee, revised the roadmap, and supported the final conference and final partner meeting. I wrote an article on regulatory barriers to industrial symbiosis in the steel and cement sectors, reviewed by an external expert, and prepared the Steel chapter presentation for the WP7 Technical Committee.
+- id: ccri
+  role: eitrm
+  title: Circular Cities and Regions Initiative (CCRI), Community of Practice for Critical Raw Materials
+  client: Horizon Europe coordination and support action, runs to March 2027
+  themes:
+    - crm
+    - circular
+    - policy
+  text: EIT RawMaterials leads the community of practice (budget around €200K), which engaged 15 cities from across Europe. I supported two meetings and webinars, with a capacity-building meeting planned for 2027, contributed to a case study, a policy brief and a white paper, and directly manage the subcontractors working for EIT RawMaterials in the project.
+- id: sign
+  role: eitrm
+  title: Green and Circular Metal Strategic Impact Group Network (SIGN)
+  client: Industry working groups and Expert Forum
+  themes:
+    - ghg
+    - circular
+    - crm
+  text: I lead the working groups on greenhouse gas assessments and on CO2 costs and savings, with around 20 industry members meeting every five weeks, and I am establishing an e-waste recycling working group. I also co-organise the SIGN Expert Forum.
+- id: cbam-advice-on-the-design-and
+  role: adelphi-mgr
+  title: 'CBAM: advice on the design and implementation of the MRV mechanism'
+  client: Umweltbundesamt (UBA)
+  themes:
+    - ghg
+    - policy
+  text: Researched the production stages and value chains of key CBAM-relevant products (iron and steel, fertilisers) and analysed system boundary definitions and the implementation challenges producers face.
+- id: empowering-partner-countries-to-engage-in
+  role: adelphi-mgr
+  title: Empowering Partner Countries to Engage in the NDC Partnership
+  client: GIZ, Small Island Developing States (Seychelles, Mauritius)
+  themes:
+    - policy
+  text: Led the NDC roadmap analysis. Evaluated national mitigation policies in energy, transport, waste and industry against climate targets, reviewed national strategy documents for policy gaps, and recommended ways to raise ambition in the industrial and energy sectors for revised NDCs.
+- id: spa
+  role: adelphi-mgr
+  title: Support Project for the Implementation of the Paris Agreement (SPA)
+  client: GIZ, three assignments
+  themes:
+    - finance
+    - ghg
+    - policy
+  text: 'Three assignments for GIZ:'
+  points:
+    - 'Uganda, climate finance access: led the analysis of barriers faced by SMEs and MSMEs, with a focus on youth- and women-led enterprises in agriculture, energy and transport. Assessed the policy landscape, wrote the report with recommendations for the Government of Uganda, and managed engagement with the Climate Finance Unit.'
+    - 'Nigeria, climate finance MRV: researched global best practice and developed an MRV roadmap feeding into Nigeria''s Net Zero Investment Plan.'
+    - 'GHG inventory compilation for industry: analysed the IPCC 2006 Guidelines and best practice for metals, and condensed them into an accessible GHG accounting guide and a methodology and governance framework for monitoring, reporting and verifying industrial process emissions.'
+- id: sarawak-net-zero-strategy-and-carbon
+  role: adelphi-mgr
+  title: Sarawak Net Zero Strategy and Carbon Plan
+  client: PwC Advisory Services for the Ministry of Energy and Environmental Sustainability, Malaysia
+  themes:
+    - ghg
+    - policy
+  text: Technical consultancy on GHG accounting for the Sarawak region applying the IPCC Guidelines and the GPC. Reviewed calculations, built bespoke Excel tools, gave expert input on uncertainty quantification, and contributed to integrating sectoral mitigation options into long-term planning.
+- id: scaling-adaptation-finance-through-banks-and
+  role: adelphi-mgr
+  title: Scaling Adaptation Finance Through Banks and the Private Sector
+  client: Global Center on Adaptation, Cooperative Rural Development Bank Tanzania
+  themes:
+    - finance
+    - ghg
+  text: Facilitated stakeholder meetings for data collection and validation, adapted the data collection framework, ran end-to-end emission calculations in Excel using the UNFCCC framework, and authored the final report with recommendations.
+- id: multi-stakeholder-projects-for-sustainable-textile
+  role: adelphi-cons
+  title: Multi-stakeholder projects for sustainable textile supply chains in Jordan
+  client: GIZ
+  themes:
+    - textiles
+    - circular
+  text: Project management covering work and time planning, reporting and budget.
+- id: capacity-building-training-for-public-stakeholders
+  role: adelphi-cons
+  title: Capacity-building training for public stakeholders on green industry
+  client: GIZ, Jordan
+  themes:
+    - circular
+    - policy
+  text: Project management, and workshop materials on digital product passports for Jordanian public stakeholders.
+- id: gain-jordan
+  role: adelphi-cons
+  title: 'GAIN: Strengthening Green Economy in Jordan'
+  client: GIZ, policy advisory and green business development
+  themes:
+    - textiles
+    - circular
+  text: Project management, and a contribution to the work package on circularity in the Jordanian ready-made garment industry. Held online and in-person consultations with garment companies, textile recyclers, international investors and the chamber of industry, made site visits in Jordanian industrial zones to assess circular practices, and led the writing of the textile waste sorting and collection guideline. Facilitated a dialogue between local stakeholders and investors on a national recycling plant.
+- id: cost-allocation-and-incentives-for-sustainable
+  role: adelphi-cons
+  title: Cost allocation and incentives for sustainable supply chains
+  client: Umweltbundesamt (UBA)
+  themes:
+    - circular
+    - policy
+  text: Led the research on global tin supply chains and co-authored four UBA publications on stakeholder power relations, business approaches and incentive mechanisms. Included industry interviews and consultations, three online advisory board sessions and two online workshops.
+- id: crm-japan-germany
+  role: adelphi-cons
+  title: Study on the role of critical raw materials in the energy transition, Japan and Germany
+  client: BMWK
+  themes:
+    - crm
+    - circular
+    - policy
+  text: Researched the critical raw materials landscape, circular economy solutions and supply-security policy gaps, and recommended opportunities for German-Japanese cooperation.
+- id: feasibility-study-for-textile-waste-recycling
+  role: adelphi-cons
+  title: Feasibility study for textile waste recycling in Vietnam
+  client: IFC
+  themes:
+    - textiles
+    - circular
+    - policy
+  text: Researched recycling technologies for apparel and footwear waste, engaged technology providers, and analysed EU policies (CEAP, WFD, CSDDD, EU Taxonomy) and their impact on Vietnamese producers.
+- id: prevention-of-marine-litter-in-the
+  role: adelphi-cons
+  title: Prevention of marine litter in the Caribbean Sea (PROMAR)
+  client: BMUV, British Virgin Islands
+  themes:
+    - policy
+    - circular
+  text: Analysed waste management policy gaps, including marine plastic, and developed strategic recommendations.
+- id: resource-efficiency-in-agri-food-production
+  role: adelphi-cons
+  title: Resource Efficiency in Agri-food Production and Processing (REAP)
+  client: European Commission, SWITCH-Asia, Tajikistan and Uzbekistan
+  themes:
+    - finance
+    - policy
+  text: Researched sustainable consumption and production policies and gaps, with recommendations, and interviewed stakeholders on MSME access to green and clean finance.
+- id: accelerating-gender-equality-in-east-asia
+  role: adelphi-cons
+  title: Accelerating Gender Equality in East Asia for an Inclusive and Green Recovery
+  client: Asian Development Bank, Mongolia and China
+  themes:
+    - policy
+    - finance
+  text: Contributed to the comprehensive assessment report, the MSME needs assessment and the project summary report, collected training materials, and supported a mentoring session and a national policy dialogue.
+- id: towards-a-nordic-baltic-circular-textile
+  role: sei
+  title: Towards a Nordic-Baltic circular textile system
+  client: Nordic Council of Ministers
+  themes:
+    - textiles
+    - circular
+  text: Led the project on textile circularity in the Baltic countries, managing budget, fundraising and reporting. Oversaw an 8-member distributed team across Estonia, Latvia, Lithuania and Denmark, organised three local dialogue events, and supported conferences in Latvia and Lithuania. Researched textile flows in Estonia and co-authored two reports.
+- id: ghg-calculation-tool-for-businesses
+  role: sei
+  title: GHG Calculation Tool for Businesses
+  client: Estonian Ministry of Environment
+  themes:
+    - ghg
+    - finance
+  text: An Excel-based tool built on the GHG Protocol that lets Estonian businesses calculate their emissions and show how much CO2 the climate initiatives they finance will save. One of the main contributors within the consortium. Led the collection and calculation of emission factors for Estonian district heating systems and consumption-based electricity, and engaged stakeholders across several industries to support adoption.
+- id: environmental-impact-assessment-of-the-estonian
+  role: sei
+  title: Environmental impact assessment of the Estonian defence sector
+  client: National Defence Investment Centre
+  themes:
+    - ghg
+    - policy
+  text: 'Leading analyst. Collected and analysed data and calculated the environmental footprint: GHG emissions from energy use, waste and water consumption. Translated climate, energy and waste policies into a format organisation representatives could use, developed Scope 1 and 2 reduction measures with cost analysis in an Excel tool with localised emission factors, and facilitated stakeholder interviews.'
+- id: comparative-lca-tool-for-ghg-emissions
+  role: sei
+  title: Comparative LCA tool for GHG emissions in Estonian rail transport
+  client: Elron, Estonia's government-owned passenger train operator
+  themes:
+    - ghg
+  text: Contributed to a GHG calculation tool for a simplified comparative life cycle assessment. Led the calculation of emission factors for diesel and electric trains in the Estonian context, including the CO2 emission factor of the Estonian electricity mix, for comparison with diesel buses.
+- id: green-bond-framework-second-opinion
+  role: sei
+  title: Green Bond Framework second opinion
+  client: Arion Bank (Iceland), with CICERO
+  themes:
+    - finance
+  text: Second-opinion consultation that led to stricter investment criteria aligned with the sustainability recommendations.
+- id: circular-economy-and-circular-design-capacity
+  role: sei
+  title: Circular economy and circular design capacity building
+  client: Estonian companies
+  themes:
+    - circular
+    - innovation
+  text: Designed and delivered workshops on circular economy and circular design.
+- id: sustainable-garment-manufacturing-supply-chains
+  role: sei
+  title: Sustainable garment manufacturing supply chains
+  client: India and Europe collaboration
+  themes:
+    - textiles
+    - circular
+  text: Co-led research on sustainable garment manufacturing supply chains.

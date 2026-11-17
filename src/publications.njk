@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: Publications
+description: Reports, policy briefs and studies co-authored by Kristiina Martin on circular economy, supply chains, critical raw materials and climate policy.
+---
+<h1 class="page-title">Publications</h1>
+<p class="section-lede">{{ publications.length }} reports, policy briefs and studies, co-authored unless stated. Items marked forthcoming are not published yet.</p>
+
+{%- for group in publications | pubGroups %}
+<h2 class="pub-year">{{ group.label }}</h2>
+{%- for p in group.items %}
+<article class="pub">
+  {%- if p.authors and p.authors.length %}
+  <p class="pub-authors">
+    {%- for a in p.authors %}{% if a == site.authorName %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor -%}
+  </p>
+  {%- endif %}
+  <p class="pub-title">{% if p.link %}<a href="{{ p.link }}" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+  <p class="pub-meta">
+    {%- if p.year %}({{ p.year }}) {% endif %}{{ p.publisher }}
+    {%- if p.forthcoming %}<span class="pub-tag">forthcoming</span>{% endif -%}
+  </p>
+</article>
+{%- endfor %}
+{%- endfor %}

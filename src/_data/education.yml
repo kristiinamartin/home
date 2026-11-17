@@ -1,0 +1,18 @@
+# EDUCATION and certificates, shown on the About me page.
+
+degrees:
+  - title: MSc Electrical Power Engineering
+    where: Tallinn University of Technology (TalTech)
+    years: 2014 to 2020
+    text: 'Thesis: Investment Needs to Achieve Climate Neutrality in the Estonian Energy Sector. Modelled the Estonian energy system in Balmorel under three carbon price scenarios for climate neutrality by 2050.'
+  - title: BSc Thermal Power Engineering
+    where: Tallinn University of Technology (TalTech)
+    years: 2011 to 2014
+    text: 'Thesis: Cost-Saving Opportunities in Transition from Electric Heating to District Heating.'
+  - title: Exchange studies
+    where: Kyungpook National University, South Korea
+    years: '2015'
+certificates:
+  - CSRD Fundamentals, CSRD Institute (2025)
+  - Introduction to the EU Taxonomy and Sustainable Finance, Greenomy Academy (2025)
+  - Jaan Poska Scholarship

@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: Experience
+description: Work experience of Kristiina Martin at EIT RawMaterials, adelphi, SEI Tallinn and earlier, with selected projects.
+---
+<h1 class="page-title">Experience</h1>
+<p class="section-lede">Select a role in the timeline or open it below. Filter by topic to see the roles and projects that match.</p>
+
+{% include "timeline.njk" %}
+
+<div class="toolbar">
+  <div class="chips" role="group" aria-label="Filter by topic" data-noun="roles">
+    <button type="button" class="chip" data-theme="" aria-pressed="true">All</button>
+    {%- for t in themes %}
+    <button type="button" class="chip" data-theme="{{ t.id }}" aria-pressed="false">{{ t.label }}</button>
+    {%- endfor %}
+  </div>
+  <div class="toolbar-actions">
+    <button type="button" class="linkbtn" data-expand="open">Expand all</button>
+    <button type="button" class="linkbtn" data-expand="close">Collapse all</button>
+  </div>
+</div>
+<p class="filter-note" id="filter-note" aria-live="polite"></p>
+
+<div id="roles">
+{%- for role in roles %}
+  <details class="role" id="role-{{ role.id }}" data-filter-item data-themes="{{ role | themesOf(projects) }}"{% if loop.first %} open{% endif %}>
+    <summary>
+      <h2 class="role-title">{{ role.title }}</h2>
+      <span class="role-org">{{ role.org }}{% if role.location %}, {{ role.location }}{% endif %}</span>
+      <span class="role-dates">{{ role | periodsText }}</span>
+      <span class="role-summary">{{ role.summary }}</span>
+    </summary>
+    <div class="role-body">
+      {%- if role.bullets and role.bullets.length %}
+      <ul class="role-bullets">
+        {%- for b in role.bullets %}
+        <li>{{ b }}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      {%- set roleProjects = projects | forRole(role.id) %}
+      {%- if roleProjects.length %}
+      <h3 class="projects-title">Selected projects</h3>
+      <div>
+        {%- for p in roleProjects %}
+        <details class="project" id="project-{{ p.id or (p.title | slugify) }}" data-sub-themes="{{ p.themes | join(' ') }}">
+          <summary>
+            <span class="project-title">{{ p.title }}</span>
+            <span class="project-client">{{ p.client }}</span>
+          </summary>
+          <div class="project-body">
+            <p>{{ p.text }}</p>
+            {%- if p.points and p.points.length %}
+            <ul>
+              {%- for pt in p.points %}
+              <li>{{ pt }}</li>
+              {%- endfor %}
+            </ul>
+            {%- endif %}
+          </div>
+        </details>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      <p class="role-back"><a href="#timeline">Back to timeline</a></p>
+    </div>
+  </details>
+{%- endfor %}
+</div>

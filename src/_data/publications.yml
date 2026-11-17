@@ -1,0 +1,110 @@
+# PUBLICATIONS: newest first. The page groups them by year automatically
+# (2024 and later get their own heading; older ones go under "2023 and earlier").
+#
+# To add one, copy a block to the top and edit it.
+#   year          publication year (leave out if unknown)
+#   authors       list in the form "Surname, I."; "Martin, K." is shown in bold
+#   publisher     place and publisher
+#   forthcoming   true shows a "forthcoming" tag; delete the line once published
+#   link          optional web address; the title becomes a link
+# Put any text containing a colon inside double quotes.
+
+- year: 2026
+  authors:
+    - Essers, L.
+    - Trescher, S.
+    - Hausotter, T.
+    - Cengiz Durmus, C.
+    - Martin, K.
+  title: 'Identification of possibilities to prove the origin of a product from a specific installation. Carbon Border Adjustment Mechanism (CBAM): Advice on the design and implementation of the monitoring, reporting and verification mechanism'
+  publisher: 'Dessau-Roßlau: Umweltbundesamt (UBA)'
+  forthcoming: true
+- year: 2026
+  authors:
+    - Cengiz Durmus, C.
+    - Martin, K.
+    - Werner, U.
+  title: 'Harnessing Transparency for Industry Decarbonisation: Good Practices in Greenhouse Gas Inventory Compilation for the Industry Sector'
+  forthcoming: true
+- year: 2025
+  authors:
+    - Martin, K.
+    - Ulutas Isevi, F.
+  title: Textile Waste Sorting and Collection Guideline for the Jordanian Ready-Made Garment Industry
+  forthcoming: true
+- year: 2025
+  authors:
+    - Strasser, J.
+    - Grüning, C.
+    - Martin, K.
+    - Tran, C.
+    - Jüde, J.
+  title: 'Cost allocation and incentive mechanisms for the environment, climate protection and resource conservation along global supply chains: Recommendations for selected incentive mechanisms'
+  publisher: 'Dessau-Roßlau: Umweltbundesamt (UBA)'
+- year: 2025
+  authors:
+    - Grüning, C.
+    - Jüde, J.
+    - Martin, K.
+    - Strasser, J.
+    - Tran, C.
+    - Grabs, J.
+  title: 'Cost allocation and incentive mechanisms for the environment, climate protection and resource conservation along global supply chains: Roadmaps for the implementation of sustainable supply chain management approaches and instruments'
+  publisher: 'Dessau-Roßlau: Umweltbundesamt (UBA)'
+- year: 2024
+  authors:
+    - Grüning, C.
+    - Martin, K.
+    - Ruthner, L.
+    - Beier, J.
+    - Berner, R.
+  title: 'Circular economy solutions for critical raw materials for the energy transition: Opportunities for German-Japanese cooperation'
+  publisher: 'Berlin: adelphi'
+- year: 2024
+  authors:
+    - Grüning, C.
+    - Jüde, J.
+    - Martin, K.
+    - Strasser, J.
+    - Tran, C.
+    - Hofstetter, J.
+  title: 'Cost allocation and incentive mechanisms for the environment, climate protection and resource conservation along global supply chains: Business approaches and instruments of sustainable supply chain management'
+  publisher: 'Dessau-Roßlau: Umweltbundesamt (UBA)'
+- year: 2024
+  authors:
+    - Strasser, J.
+    - Garcia, B.
+    - Grüning, C.
+    - Tran, C.
+    - Martin, K.
+    - Hannak, J.
+    - Jüde, J.
+    - Becker, M.
+    - Grabs, J.
+    - Hofstetter, J.
+  title: 'Cost allocation and incentive mechanisms for environmental, climate protection and resource conservation along global supply chains: Analysis of the cotton, tin, natural rubber, coffee and iron ore supply chains'
+  publisher: 'Dessau-Roßlau: Umweltbundesamt (UBA)'
+- year: 2024
+  authors:
+    - Munnolimath, A.
+    - Martin, K.
+  title: Outcome and Lessons Learned Report on Access to Cleantech Finance Activities in Tajikistan and Uzbekistan
+  publisher: REAP
+- year: 2024
+  authors:
+    - Munnolimath, A.
+    - Martin, K.
+    - Orolbaeva, A.
+  title: Understanding the Sustainable Consumption and Production (SCP) Policy Ecosystem Regionally for Tajikistan and Uzbekistan
+  publisher: REAP
+- year: 2023
+  authors:
+    - Jordan Strategy Forum
+    - Tuncer, B.
+    - Bauer, T.
+    - Martin, K.
+  title: 'Circularity: Jordan''s Opportunity to Promote Economic Growth'
+  publisher: 'Amman: Jordan Strategy Forum (JSF)'
+- title: 'Post-consumer textile circularity in the Baltic countries: Current status and recommendations for the future'
+  publisher: SEI, Nordic-Baltic circular textile system study for the Nordic Council of Ministers. Co-author, with a second report on Estonia
+  link: https://www.norden.org/en/publication/post-consumer-textile-circularity-baltic-countries

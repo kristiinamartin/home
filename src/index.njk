@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: About
+pageTitle: Kristiina Martin | Circular economy, critical raw materials and climate policy
+description: Kristiina Martin works on circular economy, critical raw materials and climate policy. About her work, career timeline and how to get in touch.
+---
+<h1 class="hero-name">{{ site.name }}</h1>
+<p class="hero-headline">{{ site.headline }}</p>
+<p class="hero-intro">{{ site.intro }}</p>
+
+<dl class="facts">
+  {%- for f in site.facts %}
+  <div><dt>{{ f.label }}</dt><dd>{{ f.value }}</dd></div>
+  {%- endfor %}
+</dl>
+
+{% include "timeline.njk" %}
+
+<p class="more"><a href="{{ '/experience/' | url }}">See the full work experience</a></p>

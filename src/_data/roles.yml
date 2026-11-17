@@ -1,0 +1,160 @@
+# WORK EXPERIENCE: one entry per position, newest first.
+# The career timeline (About and Experience pages) and the Experience page are built from this file.
+#
+# To add a role, copy a whole block (from "- id:" down to the last bullet) and edit it.
+#   id        short unique name with no spaces; used in links, e.g. "eitrm"
+#   row       employer name shown on the left of the timeline (same text = same row)
+#   bar       short label inside the timeline bar
+#   kind      current | consulting | research | venture | industry (sets the bar colour)
+#   periods   start and end as "YYYY-MM". Leave out "end" for a current role.
+#             A role with two spells (like a return to a company) lists two periods.
+#   themes    topics for the filter chips; ids are in themes.yml
+# Put any text containing a colon inside double quotes.
+
+- id: eitrm
+  row: EIT RawMaterials
+  bar: Project Officer
+  kind: current
+  org: EIT RawMaterials
+  title: Project Officer, Innovation Team
+  location: Berlin
+  periods:
+    - start: 2026-06
+  themes:
+    - innovation
+    - crm
+    - circular
+  summary: Evaluates the innovation and business potential of consortium projects in innovation calls, manages EIT RawMaterials' contribution to two Horizon Europe projects, and leads working groups with industry in the Green and Circular Metals network.
+  bullets:
+    - Lead technical evaluation of innovation funding applications of up to €2.5M, scoring the innovativeness and business potential of consortium projects. 18 projects evaluated across the last two call cut-offs.
+    - Manage EIT RawMaterials' contribution to two Horizon Europe projects, RISERS and the CCRI Community of Practice for Critical Raw Materials, including direct management of the subcontractors who deliver project work.
+    - Lead the working groups on greenhouse gas assessments and on CO2 costs and savings for the Green and Circular Metal Strategic Impact Group Network (SIGN), with around 20 industry members and web meetings every five weeks.
+    - Establishing and leading a further SIGN working group on e-waste recycling.
+    - Co-organise the SIGN Expert Forum and work with the communications team on conference messaging and delivery.
+- id: adelphi-mgr
+  row: adelphi
+  bar: Manager
+  kind: consulting
+  org: adelphi
+  title: Manager, Climate Policy
+  location: Berlin
+  periods:
+    - start: 2025-04
+      end: 2026-01
+  themes:
+    - policy
+    - ghg
+    - finance
+  summary: Technical and strategic work on climate policy, GHG accounting, MRV and climate finance for governments and international organisations, with a focus on industrial decarbonisation and carbon management. Clients included UBA, GIZ, PwC and the Global Center on Adaptation.
+  bullets:
+    - Provided strategic consulting on climate and energy transition policy, with a focus on industrial decarbonisation and carbon management.
+    - Assessed and revised national climate strategies (NDCs), translating targets into pathways with policy and investment implications.
+    - Analysed mitigation options in hard-to-abate sectors and energy-intensive industries and advised on competitiveness and transition strategies.
+    - Developed knowledge products and governance frameworks for monitoring and reporting industrial emissions.
+    - Reviewed colleagues' deliverables as part of internal quality assurance, and supported workshop agendas, marketing materials and policy research, for example on CBAM.
+- id: adelphi-cons
+  row: adelphi
+  bar: Consultant
+  kind: consulting
+  org: adelphi
+  title: Consultant, Green and Circular Economy
+  location: Berlin
+  periods:
+    - start: 2023-02
+      end: 2025-02
+  themes:
+    - circular
+    - textiles
+    - crm
+    - policy
+  summary: Project and content work on circular economy, sustainable supply chains and green industry, with responsibility for work planning, budgets and client communication. Clients included GIZ, UBA, BMWK, BMUV, ADB, IFC and the European Commission (SWITCH-Asia).
+  bullets:
+    - Managed international consulting projects in circular economy and sustainable industry, including work and time planning, reporting and budget adherence (GIZ Jordan projects).
+    - Ran regulatory analyses (CEAP, WFD, CSDDD, EU Taxonomy, CSRD) and derived actionable recommendations.
+    - Wrote policy briefs, reports and decision papers for ministries and international clients; co-authored 8 publications, listed below.
+    - Contributed to proposals and took responsibility for delivery of won projects.
+    - Conducted site visits and stakeholder consultations in Jordan, Tajikistan, Uzbekistan and the British Virgin Islands.
+    - Led the internal Textile Cluster (business development, project ideas, new client opportunities) and contributed to the internal AI Working Group, designing use cases and training materials.
+    - Mentored junior colleagues on live project work.
+- id: freelance
+  row: Freelance
+  bar: Consultant
+  kind: consulting
+  org: Freelance sustainability consultant
+  title: Self-employed
+  location: Stockholm, Sweden
+  periods:
+    - start: 2022-06
+      end: 2023-02
+  themes:
+    - innovation
+    - ghg
+    - textiles
+    - circular
+  summary: Advice to sustainable-fashion startups and a GHG tool for a startup client.
+  bullets:
+    - Mentored and consulted 8 sustainable-fashion startup teams in the Fashion for Change accelerator on EU sustainability and circularity policies, circular business models, circular product design, sustainable material sourcing and sustainability claims in marketing.
+    - Developed a bespoke GHG emissions calculation and tracking tool for a startup client to quantify, monitor and report its carbon footprint over time.
+- id: sei
+  row: SEI Tallinn
+  bar: Circular economy expert
+  kind: research
+  org: Stockholm Environment Institute (SEI), Tallinn Centre
+  title: Environmental Management, Circular Economy Expert
+  location: Tallinn, Estonia
+  periods:
+    - start: 2019-02
+      end: 2022-06
+  themes:
+    - circular
+    - ghg
+    - textiles
+    - finance
+  summary: Managed project development and delivery end to end, from grant applications through partner coordination to reporting, across circular economy, GHG accounting and environmental management. Clients included the Estonian Ministry of Environment, the National Defence Investment Centre, Tallinn Airport, the Nordic Council of Ministers and Elron.
+  bullets:
+    - Led grant applications, coordinated partner contributions and managed reporting for initiatives funded by Horizon Europe, LIFE, the Estonian Environmental Investment Fund and the Nordic Council of Ministers.
+    - Delivered GHG calculations, environmental impact assessments and circular economy strategies for clients including the Estonian defence sector and Tallinn Airport.
+    - Developed GHG calculation tools, emission factors and techno-economic analyses in line with the GHG Protocol and IPCC guidelines for industrial and public-sector use.
+    - Designed and delivered training sessions, workshops, conferences and policy consultations to build capacity and foster dialogue on sustainability.
+    - Advised companies on business transformation using circular models and resource efficiency.
+    - Mentored and directed junior colleagues on live project work.
+- id: textileinventory
+  row: Textileinventory
+  bar: Founder
+  kind: venture
+  org: Textileinventory
+  title: Founder and General Manager
+  location: Estonia
+  periods:
+    - start: 2017-02
+      end: 2019-02
+  themes:
+    - innovation
+    - textiles
+    - circular
+  summary: Founded a social enterprise that helps businesses reduce their environmental impact by increasing the reuse of textile waste.
+  bullets:
+    - Collected 7 tonnes of post-industrial textile waste from local manufacturers and passed it to local artisans and designers for upcycling.
+    - Completed Climate-KIC's four-month startup accelerator in Estonia and secured initial Climate-KIC funding to test and validate the business idea.
+    - Co-organised the "Handmade Circular Economy" hackathon, which generated 7 new business ideas.
+    - Analysed Estonian textile waste policy, identified gaps and business opportunities, and engaged policymakers and industry to advocate for waste reduction and recycling.
+    - Managed a team of 2 as founder and CEO.
+- id: gaasivorgud
+  row: Gaasivõrgud
+  bar: Data specialist
+  kind: industry
+  org: AS Gaasivõrgud
+  title: Data Acquisition Specialist
+  location: Tallinn, Estonia
+  periods:
+    - start: 2013-08
+      end: 2015-02
+    - start: 2017-03
+      end: 2018-07
+  themes:
+    - ghg
+  summary: Energy data work at Estonia's largest gas distribution network, which has more than 1,500 km of pipeline and over 45,000 consumption points.
+  bullets:
+    - '2017 to 2018: managed the Energy Information System and supported the move from an old metering system to smart metering.'
+    - '2013 to 2015: managed an online system for the natural gas distribution network.'
+    - Analysed gas consumption data to improve efficiency and planning, and acted as the interface between engineering, data management and regulatory requirements.

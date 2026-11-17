@@ -1,0 +1,23 @@
+{%- set tl = roles | timeline(projects) -%}
+<div class="timeline" id="timeline">
+  <h2 class="timeline-title">Career timeline</h2>
+  <div class="tl" style="--years: {{ tl.years }}">
+    <div class="tl-row tl-axis" aria-hidden="true">
+      <div class="tl-label"></div>
+      <div class="tl-track tl-ticks">
+        {%- for t in tl.ticks %}<span{% if t.minor %} class="tl-minor"{% endif %}>{{ t.year }}</span>{% endfor -%}
+      </div>
+    </div>
+    {%- for row in tl.rows %}
+    <div class="tl-row">
+      <div class="tl-label">{{ row.label }}</div>
+      <div class="tl-track">
+        {%- for b in row.bars %}
+        <a class="tl-bar" href="{{ ('/experience/#role-' + b.id) | url }}" data-kind="{{ b.kind }}" data-themes="{{ b.themes }}" data-label="{{ b.label }}" data-caption="{{ b.caption }}" aria-label="{{ b.aria }}" style="left: {{ b.left }}%; width: {{ b.width }}%">{{ b.label }}</a>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+  <p class="timeline-hint" id="timeline-caption" aria-live="polite">Select a role to see its details.</p>
+</div>

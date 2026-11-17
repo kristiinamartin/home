@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Education
+description: "Education and certificates of Kristiina Martin: MSc Electrical Power Engineering and BSc Thermal Power Engineering at TalTech, CSRD and EU Taxonomy training."
+---
+<h1 class="page-title">Education</h1>
+
+{%- for e in education.degrees %}
+<article class="edu-item">
+  <h2 class="edu-title">{{ e.title }}</h2>
+  <p class="edu-meta">{{ e.where }}, {{ e.years }}</p>
+  {%- if e.text %}
+  <p>{{ e.text }}</p>
+  {%- endif %}
+</article>
+{%- endfor %}
+
+<h2 class="sub-title">Certificates and awards</h2>
+<ul class="plainlist">
+  {%- for c in education.certificates %}
+  <li>{{ c }}</li>
+  {%- endfor %}
+</ul>

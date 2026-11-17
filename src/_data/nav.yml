@@ -1,0 +1,13 @@
+# NAVIGATION: the pages in the menu, in order.
+# To rename a page in the menu, change "title". The "url" must match the page's address.
+
+- title: About
+  url: /
+- title: Experience
+  url: /experience/
+- title: Publications
+  url: /publications/
+- title: Education
+  url: /education/
+- title: Contact
+  url: /contact/
